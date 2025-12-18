@@ -1,0 +1,26 @@
+[
+    {
+        "category": "Code Quality",
+        "severity": "High",
+        "message": "Missing pagination support in list endpoints",
+        "details": "API endpoints like listWorkflows return paginated responses, but the MCP tools do not expose 'cursor' or 'limit' parameters, limiting access to the first page of results."
+    },
+    {
+        "category": "Functionality",
+        "severity": "Medium",
+        "message": "Workflow Execution limitation",
+        "details": "The 'n8n_execute_workflow' tool relies on a standard webhook URL pattern (/webhook/:id). This will fail if the workflow uses a custom slug or doesn't have a webhook node. This is a known limitation but should be documented or improved if possible."
+    },
+    {
+        "category": "Type Safety",
+        "severity": "Low",
+        "message": "Use of 'any' in complex types",
+        "details": "Workflow nodes and connections use 'any' type. While understandable due to n8n's dynamic nature, strict typing would be better if the schema was stable."
+    },
+    {
+        "category": "Type Safety",
+        "severity": "Medium",
+        "message": "Missing types for updateWorkflowTags",
+        "details": "The implementation assumes the API expects an array of objects `{id: string}`, which needs verification against n8n API behavior."
+    }
+]

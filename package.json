@@ -1,0 +1,35 @@
+{
+    "name": "@anthropic/n8n-mcp-server",
+    "version": "1.0.0",
+    "description": "MCP Server for n8n workflow automation platform",
+    "type": "module",
+    "main": "build/index.js",
+    "bin": {
+        "n8n-mcp-server": "build/index.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "start": "node build/index.js",
+        "dev": "tsc --watch"
+    },
+    "keywords": [
+        "mcp",
+        "n8n",
+        "workflow",
+        "automation",
+        "ai"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.0.0",
+        "zod": "^3.23.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
